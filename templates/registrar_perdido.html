@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Objeto Perdido</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="header-left">
+            <a href="/" class="back-btn">←</a>
+
+            <div>
+                <h2>KEY INSTITUTE</h2>
+            </div>
+        </div>
+
+        <img src="{{ url_for('static', filename='logo.png') }}"
+        class="logo">
+
+    </div>
+
+    <div class="formulario">
+
+        <h1>Registrar Objeto Perdido</h1>
+
+        <form action="/registrar_perdido" method="POST">
+
+            <div class="input-group">
+                <label>Nombre:</label>
+                <input type="text" name="nombre" required>
+            </div>
+
+            <div class="input-group">
+                <label>Categoría:</label>
+
+                <select name="categoria" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="Electrónica">Electrónica</option>
+                    <option value="Útiles escolares">Útiles escolares</option>
+                    <option value="Accesorios personales">Accesorios personales</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Documentos">Documentos</option>
+                    <option value="Llaves">Llaves</option>
+                    <option value="Botellas y recipientes">Botellas y recipientes</option>
+                    <option value="Libros y cuadernos">Libros y cuadernos</option>
+                    <option value="Billeteras">Billeteras</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Lugar:</label>
+                <input type="text" name="lugar" required>
+            </div>
+
+            <div class="input-group">
+                <label>Fecha:</label>
+                <input type="date" name="fecha" required>
+            </div>
+
+            <div class="input-group">
+                <label>Carnet:</label>
+                <input type="text" name="carnet" required>
+            </div>
+
+            <div class="input-group">
+                <label>Descripción:</label>
+                <input type="text" name="descripcion" required>
+            </div>
+
+            <input type="submit" value="Registrar" class="btn">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

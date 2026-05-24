@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos Perdidos</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="header">
+
+    <div class="header-left">
+        <a href="/" class="back-btn">←</a>
+
+        <div>
+            <h2>KEY INSTITUTE</h2>
+        </div>
+    </div>
+
+    <img src="{{ url_for('static', filename='logo.png') }}"
+    class="logo">
+
+</div>
+
+    <div class="titulo-principal">
+        <h1>Objetos Perdidos</h1>
+
+        <p>
+            Lista de objetos reportados como perdidos dentro del campus.
+        </p>
+    </div>
+
+    <div class="tabla-contenedor">
+
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Lugar</th>
+                <th>Fecha</th>
+                <th>Descripción</th>
+                <th>Carnet</th>
+                <th>Acción</th>
+            </tr>
+
+            {% for objeto in perdidos %}
+
+            <tr>
+                <td>{{ objeto[1] }}</td>
+                <td>{{ objeto[2] }}</td>
+                <td>{{ objeto[3] }}</td>
+                <td>{{ objeto[4] }}</td>
+                <td>{{ objeto[5] }}</td>
+                <td>{{ objeto[6] }}</td>
+
+                <td>
+                    <form action="{{ url_for('marcar_encontrado', id_objeto=objeto[0]) }}"
+                    method="POST"
+                    onsubmit="return confirm('¿Deseas marcar este objeto como encontrado?');">
+
+                        <button type="submit" class="check-btn">
+                            ✓
+                        </button>
+
+                    </form>
+                </td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos Perdidos KEY</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="header">
+
+        <div>
+            <h2>KEY INSTITUTE</h2>
+        </div>
+
+        <img src="{{ url_for('static', filename='logo.png') }}"
+        class="logo">
+
+    </div>
+
+    <div class="titulo-principal">
+
+        <h1>Objetos Perdidos</h1>
+
+        <p>
+            Plataforma institucional para mantener el control de los
+            objetos perdidos y encontrados
+        </p>
+
+    </div>
+
+    <div class="contenedor">
+
+        <div class="botones">
+
+            <a href="/perdidos" class="boton">
+                <h2>Objetos Perdidos</h2>
+
+                <p>
+                    Consulta todos los objetos
+                    reportados como perdidos.
+                </p>
+            </a>
+
+            <a href="/encontrados" class="boton">
+                <h2>Objetos Encontrados</h2>
+
+                <p>
+                    Revisa objetos encontrados
+                    dentro del campus.
+                </p>
+            </a>
+
+            <a href="/registrar_perdido" class="boton">
+                <h2>Registrar Perdido</h2>
+
+                <p>
+                    Reporta un objeto que hayas perdido.
+                </p>
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+
+</body>
+
+</html>

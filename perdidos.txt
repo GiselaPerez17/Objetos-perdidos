@@ -1,0 +1,5 @@
+Mochila negra|Accesorios|Biblioteca|2026-04-10|Mochila con cuadernos y una calculadora
+Celular Samsung|Electrónica|Cafetería|2026-04-11|Celular color azul con funda transparente
+Llaves de casa|Accesorios|Parqueo|2026-04-09|Llavero rojo con tres llaves
+Cuaderno matemáticas|Útiles escolares|Salón 2B|2026-04-08|Cuaderno espiral con portada verde
+Botella de agua|Accesorios|Cancha|2026-04-07|Botella metálica color plateado
